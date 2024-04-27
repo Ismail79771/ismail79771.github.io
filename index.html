@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sk.Ismail curriculum vitae</title>
+    <style>
+        /* Style for collapsible sections */
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            position: relative;
+        }
+
+        .collapsible::after {
+            content: '\25B6'; /* Unicode character for right-pointing arrow */
+            position: absolute;
+            right: 10px;
+            transition: transform 0.3s;
+        }
+
+        .active::after {
+            transform: rotate(90deg);
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+        }
+
+        /* Style for profile image */
+        #profile-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Curriculum vitae
+</h1>
+
+<img src="download.jpg" alt="Profile Image" id="profile-image">
+<h2>SK.ISMAIL</h2>
+
+<button class="collapsible">Summary</button>
+<div class="content"><p>Driven MSc student in Molecular Biology and Biotechnology seeking a challenging internship opportunity to gain hands-on
+  experience and practical skills in a professional laboratory setting. Eager to contribute enthusiasm, dedication, and a strong
+  academic background to support ongoing research initiatives and learn from experienced mentors in the field. 
+</p>
+</div>
+
+<button class="collapsible">Education</button>
+<div class="content">
+  <p><div>
+    <h2>Masters [pursuing]</h2>
+    <p>SRM University AP</p>
+    <p>Stream: Molecular biology and biotechnology</p>
+</div>
+
+<div>
+    <h2>Bachelors of Science [2020 - 2023]</h2>
+    <p>Biotechnology, Microbiology, Biochemistry</p>
+    <p>Stream: Andhra Loyola College</p>
+    <p>Aggregate: - 7.2</p>
+</div>
+
+<div>
+    <h2>Intermediate [2018 - 2019]</h2>
+    <p>Sri chaitanya junior college</p>
+    <p>Stream: BIPC</p>
+    <p>Aggregate:8.47</p>
+</div>
+
+<div>
+    <h2>Board of Secondary Education</h2>
+    <p>Future path e. m high school</p>
+    <p>Aggregate:8.7</p>
+</div>
+</p>
+</div>
+
+<button class="collapsible">Technical skills</button>
+<div class="content">
+  <p>: Chromatographic techniques, basic laboratory technics (PCR, Electrophoresis, DNA/RNA extraction, and
+    protein purification techniques) and instrumental handling
+    </p>
+  
+</div>
+
+<button class="collapsible">Internships</button>
+<div class="content">
+  <p>Name of the Company: AMOGEN PHARMA PVT LTD</p>
+  <p>Area of Work: DOWNSTREAM DEPARTMENT</p>
+  <p>Key Learning: protien purification, chromatographic techniques, column packing</p>
+  <p>Duration: May-Sep 2022 </p>
+</div>
+
+<button class="collapsible">Soft skills</button>
+<div class="content">
+  <p>: Communication, team work, flexibility and adaptability to learn new skills for problem solving. </p>
+</div>
+
+<button class="collapsible">Hobbies</button>
+<div class="content">
+  <p>Travelling</p>
+  <p>watching movies</p>
+  <p>Reading books</p>
+</div>
+
+<button class="collapsible">Contact Information</button>
+<div class="content">
+  <p>G-mail address:ismail_shaik@srmap.edu.in</p>
+  <p>phone number: +91 9963200182</p>
+</div>
+
+<script>
+    // JavaScript to toggle collapsible sections
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } 
+        });
+    }
+</script>
+
+</body>
+</html>
